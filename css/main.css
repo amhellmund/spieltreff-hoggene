@@ -1,0 +1,377 @@
+html {
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling for anchor links */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    font-size: 1.1em;
+    /* Very light gray background color for the whole page */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    /* Ensures the navigation bar stays fixed at the top */
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    z-index: 1000;
+    /* Ensures it stays above other elements */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns navigation buttons to the right */
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        /* Stacks navigation buttons vertically on smaller screens */
+        align-items: flex-end;
+        /* Keeps buttons aligned to the right */
+    }
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Adjusted height */
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 60px;
+    /* Ensures the banner starts below the fixed navigation bar */
+}
+
+.banner-rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    padding: 0;
+}
+
+.logo {
+    width: 100px;
+    /* Slightly increased size */
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    top: 40%;
+    /* Moved the text slightly higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    /* Reduced the size of the text by 30% */
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.banner-content h2 {
+    font-size: 1.8rem;
+    /* Reduced the size of the text by 30% */
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.next-event {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #0d2744;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.next-event:hover {
+    background: #0056b3;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 50px 20px;
+    background: url('../images/meeple-background1.png') center center/cover;
+    color: #333;
+    text-align: center;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.section-header .line {
+    position: absolute;
+    top: 50%;
+    /* Aligned to the vertical center of the icon */
+    width: 20%;
+    /* Retained the reduced length */
+    height: 1px;
+    background: #808080;
+    /* Changed to 50% gray */
+}
+
+.section-header .line:first-child {
+    left: 25%;
+    /* Line to the left starts closer to the center */
+}
+
+.section-header .line:last-child {
+    right: 25%;
+    /* Line to the right starts closer to the center */
+}
+
+.section-header i {
+    font-size: 2rem;
+    color: #0d2744;
+    margin-bottom: 10px;
+    /* Adds spacing between the icon and the text */
+    z-index: 1;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    z-index: 1;
+    background: #f9f9f9;
+    color: #0d2744;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        top: 10px;
+        /* Adjusts for smaller screens */
+        left: 5px;
+        padding: 5px;
+    }
+
+    .logo {
+        width: 80px;
+        /* Scales down the logo for smaller screens */
+    }
+
+    .banner-rectangle {
+        width: 90%;
+        /* Adjusts width for smaller screens */
+        height: 60%;
+        /* Adjusts height for smaller screens */
+    }
+
+    .banner {
+        height: 300px;
+        /* Adjusted height for smaller screens */
+    }
+}
+
+.info-box {
+    background: rgba(0, 0, 139, 0.5);
+    /* Dark blue with 50% transparency */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: left;
+    color: white;
+    max-width: 450px;
+}
+
+.info-box p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-box i {
+    color: rgb(255, 255, 255);
+}
+
+.info-text {
+    margin: 50px auto;
+    /* Adds spacing and centers the block horizontally */
+    max-width: 1000px;
+    /* Limits the width for better readability */
+    line-height: 1.6;
+    /* Improves readability with proper line spacing */
+    color: #333;
+    /* Sets a standard text color */
+    text-align: center;
+}
+
+.info-text-without-section-header {
+    margin: 0px auto;
+    /* Adds spacing and centers the block horizontally */
+    max-width: 1000px;
+    /* Limits the width for better readability */
+    line-height: 1.6;
+    /* Improves readability with proper line spacing */
+    color: #333;
+    /* Sets a standard text color */
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Creates a 2-by-2 grid */
+    gap: 15px;
+    /* Reduced gap for smaller grid cells */
+    margin: 20px auto;
+    padding-top: 20px;
+    /* Adds padding between the grid and the section header */
+    width: 50%;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 15px;
+    /* Reduced padding for smaller grid cells */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.grid-item i {
+    font-size: 2.5rem;
+    /* Increased icon size */
+    color: red;
+    /* Sets the icon color to red */
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #0d2744;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff9e6;
+
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table a {
+    color: #0d2744;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+.event-next {
+    font-weight: bold;
+    color: #000;
+}
+
+.event-past {
+    font-weight: normal;
+    color: #000;
+}
+
+.event-future {
+    font-weight: normal;
+    color: #666;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
