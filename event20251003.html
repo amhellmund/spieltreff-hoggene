@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiele - Spieltreff Hoggene</title>
+    <title>Spieltreff Hoggene</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <nav class="navbar">
-        <ul>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar-menu">
             <li><a href="index.html#banner">Spieltreff</a></li>
             <li><a href="index.html#rules">Regeln</a></li>
-            <li><a href="index.html#location">Location</a></li>
             <li><a href="index.html#events">Termine</a></li>
+            <li><a href="index.html#location">Location</a></li>
             <li><a href="games.html">Spiele</a></li>
             <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
@@ -30,7 +32,7 @@
                 <img src="images/logo.png" alt="Logo" class="logo">
             </div>
             <div class="banner-content">
-                <h1>Spieleauswahl</h1>
+                <h1>Spiele-Event</h1>
                 <h2>3. Oktober 2025</h2>
             </div>
         </div>
@@ -91,8 +93,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; Spieltreff Hoggene, 2025 with Design by GitHub Copilot</p>
+        <p>&copy; Spieltreff Hoggene, 2025</p>
     </footer>
+    <script src="js/navbar.js" defer></script>
 </body>
 
 </html>
