@@ -14,16 +14,6 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-
-    font-size: .next-event {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-        white-space: pre-line;
-        max-width: 85%;
-        margin: 12px auto 0;
-        line-height: 1.4;
-    }
-
     overflow-x: hidden;
     /* Very light gray background color for the whole page */
 }
@@ -649,4 +639,29 @@ table a:hover {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: inline;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        display: block;
+        margin-top: 10px;
+    }
 }
