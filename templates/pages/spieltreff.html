@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner("Spieltreff", next_event=next_event) }}{% endblock %}
+
+{% block content %}
+<section id="idea" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-lightbulb"></i> <strong>Idee</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-box">
+        <p><i class="fas fa-calendar-alt"></i> Jeder 1. Freitag im Monat von 16 bis 23 Uhr</p>
+        <p><i class="fas fa-calendar-alt"></i> Ein Sonntag pro Quartal von 14 bis 20 Uhr</p>
+        <p><i class="fas fa-map-marker-alt"></i> Hoggema Treff, Ottostraße 2, Hockenheim</p>
+    </div>
+    <div class="info-text">
+        <p>Der Spieltreff Hoggene ist ein <strong>kostenloses</strong> und offenes Spieletreffen für
+            <strong>Menschen jeden Alters und
+                Spielerfahrung</strong>. In <strong>lockerer Atmosphäre</strong> spielen wir gemeinsam Brett-
+            und Gesellschaftsspiele. Wir bieten ein <strong>umfangreiches Spieleangebot</strong> von Kinder- und
+            Familienspielen über
+            Kennerspiele bis hin
+            zu Expertenspielen.
+        </p>
+        <p class="games-list-text">Eine Liste von <strong>verfügbaren Spielen</strong> findet ihr in <a
+                href="{{ asset_prefix }}games.html">dieser
+                Übersicht</a>. Wir bringen zu jedem Termin eine breite Auswahl an Spielen mit.
+        </p>
+    </div>
+</section>
+
+<section id="rules" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-book"></i> <strong>Regeln</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-3 rules-grid mx-auto">
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-chess-board"></i>
+                    <p class="card-text">Wir haben viele Spiele im Angebot, natürlich dürft ihr eure eigenen Spiele
+                        mitbringen. Wir übernehmen aber <strong>keine Haftung</strong> für verlorenes oder zerstörtes
+                        Spielematerial.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-friends"></i>
+                    <p class="card-text">Alle dürfen beim Spieltreff mitspielen egal welchen Alters. <strong>Kinder
+                            unter 12</strong> dürfen allerdings
+                        nur in <strong>Begleitung eines Erwachsenen</strong> teilnehmen. Jugendliche im Alter von
+                        <strong>12 bis 16 Jahren</strong> müssen <strong>ab 20 Uhr</strong> von einer erwachsenen
+                        Person begleitet werden.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils"></i>
+                    <p class="card-text"><strong>Wasser und Snacks</strong> stehen vor Ort zur Verfügung. Eigene
+                        Speisen und Getränke dürfen mitgebracht werden.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-wine-bottle"></i>
+                    <p class="card-text">Alle <strong>legalen und illegalen Drogen</strong> sind nicht willkommen.
+                        Bitte lasst Bier, Wein und Cannabis zu Hause und raucht nur außerhalb der
+                        Veranstaltungsräume.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-broom"></i>
+                    <p class="card-text">Die Räumlichkeiten des Hoggema Treffs werden kostenlos von der Stadt
+                        Hockenheim zur Verfügung gestellt. Deshalb sollten die Räume <strong>sauber und
+                            aufgeräumt</strong> verlassen werden.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-hammer"></i>
+                    <p class="card-text">Die Räumlichkeiten werden von vielfältigen Veranstaltungen in Hockenheim
+                        genutzt.
+                        <strong>Mutwillig und vorsätzlich</strong> zerstörte Einrichtungsgegenstände müssen ersetzt
+                        werden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-calendar-alt"></i> <strong>Termine</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-calendar-alt"></i><span> Datum</span></th>
+                    <th><i class="fas fa-clock"></i><span> Uhrzeit</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr class="event-{{ event.status }}">
+                    <td>{{ event.date_display }}</td>
+                    <td>{{ event.time_start }}-{{ event.time_end }} Uhr</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="location" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-map-marker-alt"></i> <strong>Location</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="map-container">
+        <img src="{{ asset_prefix }}images/location.png" alt="Karte zum Spieltreff" class="location-map">
+    </div>
+</section>
+{% endblock %}

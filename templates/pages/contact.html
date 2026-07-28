@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner("Kontakt & Impressum") }}{% endblock %}
+
+{% block content %}
+<section id="contact" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-envelope"></i> <strong>Kontakt</strong></h2>
+        <div class="line"></div>
+    </div>
+    <p style="margin: 20px;">
+        Wenn ihr Fragen oder Anregungen habt, schreibt uns gerne eine E-Mail unter
+        <a href="mailto:{{ site.contact_email }}">
+            <i class="fas fa-envelope"></i> {{ site.contact_email }}
+        </a>
+    </p>
+</section>
+
+<section id="impressum" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-info-circle"></i> <strong>Impressum</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text">
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p>
+            Spieltreff Hoggene<br>
+            Jennifer Rausch und Andre-Marcel Hellmund<br>
+            Ottostraße 2<br>
+            68766 Hockenheim<br>
+            Deutschland
+        </p>
+
+        <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+        <p>
+            Jennifer Rausch und Andre-Marcel Hellmund<br>
+            Alex-Möller-Straße 5<br>
+            68766 Hockenheim<br>
+            {{ site.contact_email }}
+        </p>
+
+        <h3>Streitschlichtung</h3>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+            https://ec.europa.eu/consumers/odr/. Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
+            allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+            verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
+            zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+    </div>
+</section>
+
+<section id="privacy" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-shield-alt"></i> <strong>Datenschutz</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text">
+        <h3>1. Datenschutz auf einen Blick</h3>
+        <h4>Allgemeine Hinweise</h4>
+        <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten
+            passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
+            persönlich identifiziert werden können.</p>
+
+        <h4>Datenerfassung auf dieser Website</h4>
+        <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
+            können Sie dem Impressum dieser Website entnehmen.</p>
+
+        <h4>Wie erfassen wir Ihre Daten?</h4>
+        <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich
+            z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+        <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere
+            IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem
+            oder Uhrzeit des Seitenaufrufs).</p>
+
+        <h3>2. Allgemeine Hinweise und Pflichtinformationen</h3>
+        <h4>Datenschutz</h4>
+        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln
+            Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften
+            sowie dieser Datenschutzerklärung.</p>
+
+        <h4>Hinweis zur verantwortlichen Stelle</h4>
+        <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+        <p>
+            Spieltreff Hoggene<br>
+            Ottostraße 2<br>
+            68766 Hockenheim<br>
+            Deutschland<br><br>
+            E-Mail: {{ site.contact_email }}
+        </p>
+
+        <h3>3. Datenerfassung auf dieser Website</h3>
+        <h4>Server-Log-Dateien</h4>
+        <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten
+            Server-Log-Dateien,
+            die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+
+        <p>Browsertyp und Browserversion</p>
+        <p>verwendetes Betriebssystem</p>
+        <p>Referrer URL</p>
+        <p>Hostname des zugreifenden Rechners</p>
+        <p>Uhrzeit der Serveranfrage</p>
+        <p>IP-Adresse</p>
+
+        <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+
+        <h4>Anfrage per E-Mail</h4>
+        <p>Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus
+            hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens
+            bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+    </div>
+</section>
+{% endblock %}

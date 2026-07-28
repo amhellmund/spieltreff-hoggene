@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner("Unsere Spiele") }}{% endblock %}
+
+{% block content %}
+<section id="games" class="content-section">
+    <div class="info-text-without-section-header">
+        <p>Hier findest du eine Auswahl unserer verfügbaren Spiele. Egal ob Klassiker, Familienspiele oder
+            Expertenspiele – für jeden ist etwas dabei!</p>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dice"></i> Spiel</th>
+                    <th><i class="fas fa-tags"></i> Kategorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in games %}
+                <tr>
+                    <td>{{ game.name }}</td>
+                    <td>{{ game.category }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

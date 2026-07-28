@@ -1,0 +1,587 @@
+games:
+- name: 1906 San Francisco
+  category: Kenner
+- name: 1923 Cotton Club
+  category: Kenner
+- name: 1980 Sixtinische Kapelle
+  category: Familie
+- name: 1998 ISS
+  category: Kenner
+- name: 20 Questions
+  category: Party
+- name: '23'
+  category: Familie
+- name: 4 Gewinnt
+  category: Familie
+- name: 5 Towers
+  category: Familie
+- name: 7 Wonders
+  category: Kenner
+- name: 7 Wonders - Duel
+  category: Kenner
+- name: 8-Bit-Box
+  category: Party
+- name: Abtei der Rätsel
+  category: Familie
+- name: Activity
+  category: Party
+- name: Alhambra
+  category: Familie
+- name: Andor Junior
+  category: Kinder
+- name: Arche Nova
+  category: Experte
+- name: Artengarten
+  category: Kenner
+- name: Auf Achse
+  category: Familie
+- name: Auf den Wegen von Darwin
+  category: Familie
+- name: Augustus
+  category: Familie
+- name: Ausverkauft
+  category: Familie
+- name: Adel verpflichtet
+  category: Familie
+- name: Age of Innovations
+  category: Experte
+- name: Agricola
+  category: Experte
+- name: Atlantis
+  category: Familie
+- name: Azul
+  category: Familie
+- name: Azul - Der Sommerpavillon
+  category: Familie
+- name: Azul - Die Buntglasfenster von Sintra
+  category: Familie
+- name: Backgammon
+  category: Familie
+- name: Barbarossa
+  category: Familie
+- name: Bierpong
+  category: Party
+- name: Blokus
+  category: Familie
+- name: Bluff
+  category: Party
+- name: Bohnanza
+  category: Familie
+- name: Bomb Busters
+  category: Familie
+- name: Bonsai
+  category: Familie
+- name: Boss Fighters QR
+  category: Familie
+- name: Botanicus
+  category: Kenner
+- name: Burger Slam
+  category: Familie
+- name: Cabo
+  category: Familie
+- name: Café del Gatto
+  category: Familie
+- name: Café International - Das Kartenspiel
+  category: Familie
+- name: CamelCup
+  category: Familie
+- name: Captain Flip
+  category: Familie
+- name: Captain Sonar
+  category: Kenner
+- name: Carcassonne
+  category: Familie
+- name: Carcassonne - Brücken, Burgen und Basare
+  category: Familie
+- name: Carcassonne - Der Turm
+  category: Familie
+- name: Carcassonne - Händler und Baumeister
+  category: Familie
+- name: Carcassonne - Wirtshäuser und Kathedralen
+  category: Familie
+- name: Carnegie
+  category: Experte
+- name: Carré
+  category: Familie
+- name: Cascadia
+  category: Familie
+- name: Cascadia Junior
+  category: Kinder
+- name: Castle Combo
+  category: Familie
+- name: Catan Junior
+  category: Kinder
+- name: Cities
+  category: Familie
+- name: City Tycoon
+  category: Kenner
+- name: Clack!
+  category: Kinder
+- name: Cards against Humanity
+  category: Party
+- name: Cards vs. Gravity
+  category: Party
+- name: Challengers
+  category: Kenner
+- name: Clash of Cultures
+  category: Experte
+- name: Clever Hoch Drei
+  category: Familie
+- name: Cluedo - Big Bang Theory
+  category: Familie
+- name: Codenames
+  category: Party
+- name: Codenames - Duett
+  category: Party
+- name: Colt Express - Big Box
+  category: Familie
+- name: Concept
+  category: Party
+- name: Cortex
+  category: Party
+- name: Das Riff
+  category: Familie
+- name: Das verrückte Labyrinth
+  category: Familie
+- name: Das verrückte Labyrinth - Das Duell
+  category: Familie
+- name: Deduckto
+  category: Familie
+- name: Deep Regrets
+  category: Party
+- name: Der Herr der Ringe
+  category: Kenner
+- name: Der Herr der Ringe - Die Suche
+  category: Kenner
+- name: Der Kartograph
+  category: Kenner
+- name: Der Schatz der Inka
+  category: Familie
+- name: Der verfluchte Geburtstag
+  category: Familie
+- name: Deja-Vu
+  category: Familie
+- name: Die magischen Schlüssel
+  category: Kinder
+- name: Die Siedler von Catan
+  category: Familie
+- name: Die Siedler von Catan - Das Kartenspiel
+  category: Familie
+- name: Die Sieder von Catan - Das Würfelspiel
+  category: Familie
+- name: Die Siedler von Catan - Händler und Barbaren
+  category: Familie
+- name: Die Siedler von Catan - Städte und Ritter
+  category: Familie
+- name: Die wandelnden Türme
+  category: Familie
+- name: Die weiße Burg
+  category: Kenner
+- name: Dimension
+  category: Familie
+- name: Dodelido
+  category: Party
+- name: Dodo
+  category: Kinder
+- name: Dominion - Die Alchemisten
+  category: Familie
+- name: Dominion - Die Intrige
+  category: Familie
+- name: Dominion - Seaside
+  category: Familie
+- name: Dominion - Was für eine Welt
+  category: Familie
+- name: Dorfromantik
+  category: Familie
+- name: Dragomino
+  category: Kinder
+- name: Drecksau Total
+  category: Familie
+- name: DREIst
+  category: Familie
+- name: Dune - Imperium
+  category: Kenner
+- name: Diamant
+  category: Familie
+- name: Die Burgen von Burgund
+  category: Kenner
+- name: Die Crew
+  category: Kenner
+- name: Die Crew - Mission Tiefsee
+  category: Kenner
+- name: Die Legenden von Andor
+  category: Kenner
+- name: Die verlorenen Ruinen von Arnak
+  category: Experte
+- name: Dixit
+  category: Familie
+- name: Drachenwurf
+  category: Familie
+- name: Druidenwalzer
+  category: Familie
+- name: Drunter & Drüber
+  category: Familie
+- name: E-Mission
+  category: Familie
+- name: Eine Stadt für Amytis
+  category: Familie
+- name: Einfach Genial
+  category: Familie
+- name: Elfer Raus!
+  category: Familie
+- name: Elfenland
+  category: Familie
+- name: Endeavor - Die Tiefsee
+  category: Kenner
+- name: Exit Kids
+  category: Kinder
+- name: Fantastische Reiche
+  category: Kenner
+- name: Fiesta de los Muertos
+  category: Party
+- name: Flip7
+  category: Familie
+- name: Flügelschlag
+  category: Kenner
+- name: Framework
+  category: Familie
+- name: Ganz Schön Clever
+  category: Familie
+- name: Gegenteilspiel
+  category: Party
+- name: Gloomhaven - Die Pranken des Löwen
+  category: Experte
+- name: Greenville 1989
+  category: Kenner
+- name: Grundstein Metropolis
+  category: Kenner
+- name: Halli Galli
+  category: Familie
+- name: Halli Galli Junior
+  category: Kinder
+- name: Happy City
+  category: Familie
+- name: Harmonies
+  category: Familie
+- name: Heads of State
+  category: Kenner
+- name: Hedbanz
+  category: Kinder
+- name: Hexentanz
+  category: Familie
+- name: High Score
+  category: Familie
+- name: Hitster Bingo
+  category: Party
+- name: Hitster Guilty Pleasures
+  category: Party
+- name: Hitster Rock
+  category: Party
+- name: Hitster TV & Movie
+  category: Party
+- name: Hotel
+  category: Familie
+- name: Iki - Die Händler und Handwerker von Edo
+  category: Kenner
+- name: Il Vecchio
+  category: Kenner
+- name: Istanbul
+  category: Kenner
+- name: Istanbul - Mokka & Bakschisch
+  category: Kenner
+- name: Jenga
+  category: Familie
+- name: Joking Hazard
+  category: Party
+- name: Just One
+  category: Party
+- name: Karak
+  category: Kinder
+- name: Karuba
+  category: Familie
+- name: Karuba Junior
+  category: Kinder
+- name: Kashgar - Händler der Seidenstraße
+  category: Familie
+- name: Keine Ehre unter Dieben
+  category: Familie
+- name: Kelp
+  category: Familie
+- name: Kinderquiz
+  category: Kinder
+- name: Kingdom Builder
+  category: Familie
+- name: Kingdom Builder - Crossroads
+  category: Familie
+- name: Kingdom Builder - Nomads
+  category: Familie
+- name: Kingdomino
+  category: Familie
+- name: Kniffel Kids
+  category: Kinder
+- name: Kuh & Co
+  category: Kinder
+- name: Kuhhandel
+  category: Familie
+- name: Kugelblitz
+  category: Kinder
+- name: Ligretto Crazy
+  category: Party
+- name: Lobo 77
+  category: Familie
+- name: Lotti Karotti
+  category: Kinder
+- name: Lucca Città
+  category: Familie
+- name: Keltis
+  category: Familie
+- name: Knowing me, Knowing you
+  category: Party
+- name: Kréus
+  category: Kenner
+- name: Last Message
+  category: Party
+- name: Living Forest
+  category: Kenner
+- name: Lost Cities
+  category: Familie
+- name: Love Letter
+  category: Familie
+- name: Memory
+  category: Familie
+- name: Mischwald
+  category: Kenner
+- name: Mischwald - Alpin
+  category: Kenner
+- name: Mischwald - Waldrand
+  category: Kenner
+- name: Monopoly
+  category: Familie
+- name: Munchkin
+  category: Party
+- name: My Lil' Everdell
+  category: Familie
+- name: Mycelia
+  category: Familie
+- name: Mystery
+  category: Familie
+- name: Nanu
+  category: Kinder
+- name: Nebula
+  category: Kenner
+- name: Neuland
+  category: Kenner
+- name: Nobody is Perfect 1
+  category: Party
+- name: Nobody is Perfect 2
+  category: Party
+- name: Nordhessen Fertig, Los!
+  category: Familie
+- name: Ono 99
+  category: Familie
+- name: Outburst
+  category: Party
+- name: Outsmarted!
+  category: Party
+- name: Panda Royale
+  category: Familie
+- name: Pandemic Legacy
+  category: Experte
+- name: Paleo
+  category: Kenner
+- name: Parks
+  category: Kenner
+- name: Passt Nicht!
+  category: Familie
+- name: Pentago
+  category: Familie
+- name: Phase 10
+  category: Familie
+- name: Phase 10 - Junior
+  category: Kinder
+- name: Phase 10 - Master
+  category: Familie
+- name: Piratenspiel
+  category: Kinder
+- name: Port Royal
+  category: Familie
+- name: Pharao
+  category: Kenner
+- name: Pictures
+  category: Familie
+- name: Planet Unknown
+  category: Kenner
+- name: Poetry for Neanderthals
+  category: Party
+- name: Poker
+  category: Party
+- name: Princess Rebel
+  category: Familie
+- name: Quacks und Co
+  category: Kinder
+- name: Quacksalber von Quedlinburg
+  category: Kenner
+- name: Quacksalber - Das Duell
+  category: Familie
+- name: Quicksand
+  category: Familie
+- name: Qwinto
+  category: Familie
+- name: Qwirkle
+  category: Familie
+- name: Qwixx
+  category: Familie
+- name: Regicide
+  category: Familie
+- name: Revive
+  category: Kenner
+- name: Riftforce
+  category: Kenner
+- name: Risiko
+  category: Kenner
+- name: Robin Hood
+  category: Familie
+- name: Roll Player
+  category: Kenner
+- name: Scotland Yard
+  category: Familie
+- name: S.O.S. Affenalarm
+  category: Kinder
+- name: Savannah Park
+  category: Kinder
+- name: Schere Stein Papier
+  category: Party
+- name: Schrödingers Katzen
+  category: Party
+- name: Schwarz Rot Gelb
+  category: Party
+- name: Scout
+  category: Familie
+- name: Scrabble
+  category: Familie
+- name: Secret Hitler
+  category: Party
+- name: Seti
+  category: Experte
+- name: Skip-Bo
+  category: Familie
+- name: Skull King
+  category: Familie
+- name: Sky Team
+  category: Kenner
+- name: Skyjo Action
+  category: Familie
+- name: Slay the Spire
+  category: Kenner
+- name: Slotter
+  category: Familie
+- name: Spielesammlung
+  category: Familie
+- name: Stone Age Junior
+  category: Kinder
+- name: Stratego
+  category: Kenner
+- name: Space Alert
+  category: Experte
+- name: Spicy
+  category: Familie
+- name: Spiel des Lebens
+  category: Familie
+- name: Spiel des Wissens
+  category: Familie
+- name: Spiegel Spukschloss
+  category: Familie
+- name: Stille Post Extrem
+  category: Party
+- name: Subtext
+  category: Party
+- name: Tabu
+  category: Party
+- name: Tabu - Family Edition
+  category: Familie
+- name: Tal der Wikinger
+  category: Kinder
+- name: Tausch Rausch
+  category: Kenner
+- name: Tension
+  category: Party
+- name: Tesseract
+  category: Kenner
+- name: Terra Nova
+  category: Kenner
+- name: That's not a Hat
+  category: Party
+- name: The 7th Continent
+  category: Experte
+- name: The Gang
+  category: Familie
+- name: The Game
+  category: Familie
+- name: The Mind
+  category: Familie
+- name: The Vale of Eternity
+  category: Kenner
+- name: This War of Mine
+  category: Experte
+- name: Time Stories
+  category: Kenner
+- name: Top 10
+  category: Party
+- name: Topp die Torte!
+  category: Kinder
+- name: Tower Up
+  category: Familie
+- name: Trains - Die Bahn kommt
+  category: Familie
+- name: Treasure Island
+  category: Kenner
+- name: Trivial Pursuit
+  category: Party
+- name: Tutto
+  category: Familie
+- name: Tüftelmonster
+  category: Familie
+- name: Twilight Imperium 4. Edition
+  category: Experte
+- name: Twister
+  category: Party
+- name: Ubongo Junior
+  category: Kinder
+- name: Ultimate Outburst
+  category: Party
+- name: Unlock
+  category: Kenner
+- name: Uno
+  category: Familie
+- name: Uno Flip
+  category: Familie
+- name: Uno Teams
+  category: Familie
+- name: Village
+  category: Kenner
+- name: Viticulture
+  category: Kenner
+- name: Viticulture - Tuscany
+  category: Kenner
+- name: Wanderlust
+  category: Familie
+- name: Wasserkraft
+  category: Experte
+- name: Welcome to the Moon
+  category: Kenner
+- name: Wettlauf nach El Dorado
+  category: Familie
+- name: Wizard
+  category: Familie
+- name: Wizard Extreme
+  category: Familie
+- name: Wizard Junior
+  category: Kinder
+- name: Woodcraft
+  category: Kenner
+- name: Würfelkönig
+  category: Familie
+- name: Zug um Zug - Europa
+  category: Familie
+- name: Zug um Zug - Meine erste Reise
+  category: Kinder

@@ -1,0 +1,34 @@
+site:
+  title: "Spieltreff Hoggene"
+  lang: de
+  contact_email: fun@spieltreff-hoggene.de
+  copyright_year: 2026
+  fontawesome_version: "6.4.2"
+  bootstrap_version: "5.3.3"
+
+nav:
+  - label: Idee
+    page: index.html
+  - label: Events
+    dropdown:
+      - label: Spieltreff
+        page: events/spieltreff.html
+      - label: Brett-vorm-Kopf
+        page: events/brett-vorm-kopf.html
+      - label: Brett-am-Ring
+        page: events/brett-am-ring.html
+  - label: Spiele
+    page: games.html
+  - label: Verein
+    page: verein.html
+  - label: Kontakt
+    page: contact.html
+
+footer:
+  links:
+    - label: Impressum
+      page: contact.html
+      anchor: impressum
+    - label: Datenschutz
+      page: contact.html
+      anchor: privacy

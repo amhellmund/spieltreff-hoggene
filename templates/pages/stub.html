@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner(title) }}{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="info-text-without-section-header">
+        <p>Inhalte folgen in Kürze.</p>
+    </div>
+</section>
+{% endblock %}

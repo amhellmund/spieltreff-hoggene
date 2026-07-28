@@ -1,0 +1,14 @@
+{% macro render_banner(title, next_event=None) %}
+<header id="banner" class="banner{% if next_event %} banner--event{% endif %}">
+    <img src="{{ asset_prefix }}images/banner.jpg" alt="" class="banner-image">
+    <div class="banner-scrim"></div>
+    <div class="banner-content">
+        <img src="{{ asset_prefix }}images/logo-icon.png" alt="{{ site.title }}" class="banner-logo">
+        <h1>{{ title }}</h1>
+        {% if next_event %}
+        <span class="next-event">Nächster Termin:
+            <strong>{{ next_event.date_display }}</strong> von <strong>{{ next_event.time_start }} bis {{ next_event.time_end }} Uhr</strong></span>
+        {% endif %}
+    </div>
+</header>
+{% endmacro %}
