@@ -10,7 +10,13 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 KNOWN_CATEGORIES = {"Familie", "Kenner", "Party", "Kinder", "Experte"}
 
-KNOWN_EVENT_TYPES = {"spieltreff", "brett-vorm-kopf", "brett-am-ring"}
+EVENT_TYPE_INFO = {
+    "spieltreff": {"label": "Spieltreff", "page": "events/spieltreff.html"},
+    "brett-vorm-kopf": {"label": "Brett-vorm-Kopf", "page": "events/brett-vorm-kopf.html"},
+    "brett-am-ring": {"label": "Brett-am-Ring", "page": "events/brett-am-ring.html"},
+}
+
+KNOWN_EVENT_TYPES = set(EVENT_TYPE_INFO)
 
 GERMAN_MONTHS = [
     "Januar", "Februar", "März", "April", "Mai", "Juni",
@@ -25,6 +31,14 @@ def _load_yaml(name):
 
 def format_german_date(date):
     return f"{date.day}. {GERMAN_MONTHS[date.month - 1]} {date.year}"
+
+
+def format_german_date_range(date_start, date_end):
+    if date_start == date_end:
+        return format_german_date(date_start)
+    if (date_start.year, date_start.month) == (date_end.year, date_end.month):
+        return f"{date_start.day}.–{date_end.day}. {GERMAN_MONTHS[date_start.month - 1]} {date_start.year}"
+    return f"{format_german_date(date_start)} – {format_german_date(date_end)}"
 
 
 def load_site():
@@ -63,16 +77,31 @@ def load_events(today=None, type=None):
     if type is not None:
         events = [e for e in events if e["type"] == type]
     for event in events:
-        event["date_display"] = format_german_date(event["date"])
+        event.setdefault("date_end", event["date"])
+        if "days" not in event:
+            # Single-day event: synthesize the one-entry `days` list so
+            # templates can treat every event uniformly.
+            event["days"] = [{
+                "date": event["date"],
+                "time_start": event["time_start"],
+                "time_end": event["time_end"],
+            }]
+        for day in event["days"]:
+            day["date_display"] = format_german_date(day["date"])
+        event["date_display"] = format_german_date_range(event["date"], event["date_end"])
+        event["type_label"] = EVENT_TYPE_INFO[event["type"]]["label"]
+        event["type_page"] = EVENT_TYPE_INFO[event["type"]]["page"]
     events.sort(key=lambda e: e["date"])
 
-    future_or_today = [e for e in events if e["date"] >= today]
+    # A multi-day event is only "past" once its last day has passed, and
+    # stays the "next" event until then too.
+    future_or_today = [e for e in events if e["date_end"] >= today]
     next_event = future_or_today[0] if future_or_today else None
 
     for event in events:
         if event is next_event:
             event["status"] = "next"
-        elif event["date"] < today:
+        elif event["date_end"] < today:
             event["status"] = "past"
         else:
             event["status"] = "future"

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner(title, next_event=next_event, show_event_type=False) }}{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="page-logo-container">
+        <img src="{{ asset_prefix }}images/logo_brett-vorm-kopf.png" alt="Brett-vorm-Kopf Logo" class="page-logo">
+    </div>
+    <div class="info-text-without-section-header">
+        <p>Inhalte folgen in Kürze.</p>
+    </div>
+</section>
+
+<section id="anmeldung" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-pen"></i> <strong>Anmeldung</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text-without-section-header">
+        <p>Damit wir Personenanzahl und Zeiten planen können, meldet euch bitte vorab über unser
+            <a href="https://forms.gle/NhNw8K6kUY34svK49" target="_blank" rel="noopener">Anmeldeformular</a> an.</p>
+    </div>
+</section>
+
+<section id="location" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-map-marker-alt"></i> <strong>Location</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="map-container">
+        <img src="{{ asset_prefix }}images/location.png" alt="Karte zum Spieltreff" class="location-map">
+    </div>
+    <p class="location-text"><i class="fas fa-snowflake"></i> Die Räumlichkeiten sind klimatisiert.</p>
+</section>
+{% endblock %}

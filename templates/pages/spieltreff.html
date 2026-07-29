@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "partials/banner.html" import render_banner with context %}
 
-{% block banner %}{{ render_banner("Spieltreff", next_event=next_event) }}{% endblock %}
+{% block banner %}{{ render_banner("Spieltreff", next_event=next_event, show_event_type=False) }}{% endblock %}
 
 {% block content %}
 <section id="idea" class="content-section">
@@ -24,9 +24,11 @@
             Kennerspiele bis hin
             zu Expertenspielen.
         </p>
-        <p class="games-list-text">Eine Liste von <strong>verfügbaren Spielen</strong> findet ihr in <a
-                href="{{ asset_prefix }}games.html">dieser
-                Übersicht</a>. Wir bringen zu jedem Termin eine breite Auswahl an Spielen mit.
+        <p class="games-list-text">Wir bringen zu jedem Termin eine breite Auswahl an Spielen mit. Falls ihr ein
+            bestimmtes Spiel spielen möchtet, meldet euch gerne unter <a
+                href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> bei uns. Eine Liste von
+            <strong>verfügbaren Spielen</strong> findet ihr in <a href="{{ asset_prefix }}games.html">dieser
+                Übersicht</a>.
         </p>
     </div>
 </section>
@@ -122,8 +124,8 @@
             <tbody>
                 {% for event in events %}
                 <tr class="event-{{ event.status }}">
-                    <td>{{ event.date_display }}</td>
-                    <td>{{ event.time_start }}-{{ event.time_end }} Uhr</td>
+                    <td>{% for day in event.days %}{{ day.date_display }}{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
+                    <td>{% for day in event.days %}{{ day.time_start }}-{{ day.time_end }} Uhr{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -140,5 +142,6 @@
     <div class="map-container">
         <img src="{{ asset_prefix }}images/location.png" alt="Karte zum Spieltreff" class="location-map">
     </div>
+    <p class="location-text"><i class="fas fa-snowflake"></i> Die Räumlichkeiten sind klimatisiert.</p>
 </section>
 {% endblock %}

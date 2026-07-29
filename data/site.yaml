@@ -7,8 +7,6 @@ site:
   bootstrap_version: "5.3.3"
 
 nav:
-  - label: Idee
-    page: index.html
   - label: Events
     dropdown:
       - label: Spieltreff

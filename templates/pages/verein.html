@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner(title) }}{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="info-text-without-section-header">
+        <p>
+            Wir befinden uns aktuell in der Gründungsvorbereitung eines gemeinnützigen
+            eingetragenen Vereins (e.V.). Sobald es Neuigkeiten gibt, informieren wir euch an
+            dieser Stelle.
+        </p>
+    </div>
+</section>
+{% endblock %}

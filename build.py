@@ -50,16 +50,22 @@ def main():
     nav = load_nav()
     footer = load_footer()
     games = load_games()
-    events, next_event = load_events(today=args.today, type="spieltreff")
+    all_events, next_event = load_events(today=args.today)
+    upcoming_events = [e for e in all_events if e["status"] != "past"]
+    spieltreff_events, spieltreff_next_event = load_events(today=args.today, type="spieltreff")
+    _, brett_vorm_kopf_next_event = load_events(today=args.today, type="brett-vorm-kopf")
 
-    render_page("stub.html", "index.html", site, nav, footer,
-                page_title="Idee", title="Idee")
+    render_page("home.html", "index.html", site, nav, footer,
+                page_title="Spieltreff Hoggene", title="Spieltreff Hoggene",
+                events=upcoming_events, next_event=next_event)
 
     render_page("spieltreff.html", "events/spieltreff.html", site, nav, footer,
-                page_title="Spieltreff", events=events, next_event=next_event)
+                page_title="Spieltreff", events=spieltreff_events,
+                next_event=spieltreff_next_event)
 
-    render_page("stub.html", "events/brett-vorm-kopf.html", site, nav, footer,
-                page_title="Brett-vorm-Kopf", title="Brett-vorm-Kopf")
+    render_page("brett-vorm-kopf.html", "events/brett-vorm-kopf.html", site, nav, footer,
+                page_title="Brett vorm Kopf", title="Brett vorm Kopf",
+                next_event=brett_vorm_kopf_next_event)
 
     render_page("stub.html", "events/brett-am-ring.html", site, nav, footer,
                 page_title="Brett-am-Ring", title="Brett-am-Ring")
@@ -67,7 +73,7 @@ def main():
     render_page("games.html", "games.html", site, nav, footer,
                 page_title="Spiele", games=games)
 
-    render_page("stub.html", "verein.html", site, nav, footer,
+    render_page("verein.html", "verein.html", site, nav, footer,
                 page_title="Verein", title="Verein")
 
     render_page("contact.html", "contact.html", site, nav, footer,

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% from "partials/banner.html" import render_banner with context %}
+
+{% block banner %}{{ render_banner(title, next_event=next_event) }}{% endblock %}
+
+{% block content %}
+<section id="intro" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-heart"></i> <strong>Unsere Motivation</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text">
+        <p>Der <strong>Spieltreff Hoggene</strong> ist eine Brett- und Gesellschaftsspiele-Community aus Hockenheim.
+            Unter diesem Dach bieten wir <strong>verschiedene Spielformate</strong> an – von der regelmäßigen
+            offenen Runde bis zu besonderen Events. Schaut einfach vorbei, welches Format am besten zu euch
+            passt.</p>
+        <p>Denn kaum etwas verbindet so sehr wie ein gutes Brettspiel: Menschen kommen an einen Tisch zusammen,
+            es wird gelacht, mitgefiebert und getüftelt – ganz ohne Bildschirm. Ob spannendes Kopf-an-Kopf-Rennen
+            oder gemeinsames Meistern eines kniffligen Abenteuers: Jede Partie bringt <strong>Freude, Nervenkitzel
+                und ein Stück geistige Fitness</strong> mit sich. Genau diese Begeisterung wollen wir teilen –
+            komm vorbei und erlebe sie selbst!</p>
+    </div>
+</section>
+
+<section id="event-types" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-dice"></i> <strong>Unsere Events</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 event-type-grid mx-auto">
+        <div class="col">
+            <a href="{{ asset_prefix }}events/spieltreff.html" class="card h-100 event-type-card text-decoration-none">
+                <img src="{{ asset_prefix }}images/logo.png" alt="Spieltreff Logo" class="event-type-logo">
+                <div class="card-body">
+                    <h3 class="card-title">Spieltreff</h3>
+                    <p class="card-text">Unser offenes Spieletreffen jeden 1. Freitag im Monat und an einem
+                        Sonntag pro Quartal – für Menschen jeden Alters und jeder Spielerfahrung.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{{ asset_prefix }}events/brett-vorm-kopf.html" class="card h-100 event-type-card text-decoration-none">
+                <img src="{{ asset_prefix }}images/logo_brett-vorm-kopf.png" alt="Brett-vorm-Kopf Logo" class="event-type-logo">
+                <div class="card-body">
+                    <h3 class="card-title">Brett-vorm-Kopf</h3>
+                    <p class="card-text">Details zu diesem Spielformat folgen in Kürze.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{{ asset_prefix }}events/brett-am-ring.html" class="card h-100 event-type-card text-decoration-none">
+                <img src="{{ asset_prefix }}images/logo.png" alt="Brett-am-Ring Logo" class="event-type-logo">
+                <div class="card-body">
+                    <h3 class="card-title">Brett-am-Ring</h3>
+                    <p class="card-text">Details zu diesem Spielformat folgen in Kürze.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-calendar-alt"></i> <strong>Nächste Events</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dice"></i><span> Event</span></th>
+                    <th><i class="fas fa-calendar-alt"></i><span> Datum</span></th>
+                    <th><i class="fas fa-clock"></i><span> Uhrzeit</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr class="event-{{ event.status }}">
+                    <td class="align-middle"><a href="{{ asset_prefix }}{{ event.type_page }}">{{ event.type_label }}</a></td>
+                    <td>{% for day in event.days %}{{ day.date_display }}{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
+                    <td>{% for day in event.days %}{{ day.time_start }}-{{ day.time_end }} Uhr{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3">Aktuell sind keine Termine geplant.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

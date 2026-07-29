@@ -1,4 +1,4 @@
-{% macro render_banner(title, next_event=None) %}
+{% macro render_banner(title, next_event=None, show_event_type=True) %}
 <header id="banner" class="banner{% if next_event %} banner--event{% endif %}">
     <img src="{{ asset_prefix }}images/banner.jpg" alt="" class="banner-image">
     <div class="banner-scrim"></div>
@@ -6,8 +6,14 @@
         <img src="{{ asset_prefix }}images/logo-icon.png" alt="{{ site.title }}" class="banner-logo">
         <h1>{{ title }}</h1>
         {% if next_event %}
-        <span class="next-event">Nächster Termin:
-            <strong>{{ next_event.date_display }}</strong> von <strong>{{ next_event.time_start }} bis {{ next_event.time_end }} Uhr</strong></span>
+        <span class="next-event"><i class="fas fa-bullhorn"></i> Nächstes Event:
+            {% if show_event_type %}<strong>{{ next_event.type_label }}</strong> am {% endif %}<strong>{{ next_event.date_display }}</strong>
+            {% if next_event.days|length > 1 %}
+            (<strong>{% for day in next_event.days %}{{ day.time_start }}–{{ day.time_end }} Uhr{% if not loop.last %} / {% endif %}{% endfor %}</strong>)
+            {% else %}
+            von <strong>{{ next_event.time_start }} bis {{ next_event.time_end }} Uhr</strong>
+            {% endif %}
+        </span>
         {% endif %}
     </div>
 </header>

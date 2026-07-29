@@ -9,23 +9,91 @@
         <p>Hier findest du eine Auswahl unserer verfügbaren Spiele. Egal ob Klassiker, Familienspiele oder
             Expertenspiele – für jeden ist etwas dabei!</p>
     </div>
+    <div class="games-filters">
+        <div class="games-filter-search">
+            <label for="game-search" class="visually-hidden">Spiel suchen</label>
+            <span class="games-filter-icon"><i class="fas fa-search"></i></span>
+            <input type="search" id="game-search" class="form-control" placeholder="Spiel suchen …">
+        </div>
+        <div class="games-filter-category" id="game-category-filter" role="group" aria-label="Nach Kategorie filtern">
+            <input type="checkbox" class="btn-check category-filter-all" id="category-filter-all" value="" checked>
+            <label class="btn btn-outline-secondary" for="category-filter-all">Alle</label>
+            {% for category in games | map(attribute="category") | unique | sort %}
+            <input type="checkbox" class="btn-check category-filter-option" id="category-filter-{{ loop.index }}"
+                value="{{ category }}">
+            <label class="btn btn-outline-secondary" for="category-filter-{{ loop.index }}">{{ category }}</label>
+            {% endfor %}
+        </div>
+    </div>
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-striped" id="games-table">
             <thead>
                 <tr>
-                    <th><i class="fas fa-dice"></i> Spiel</th>
+                    <th class="text-start"><i class="fas fa-dice"></i> Spiel</th>
                     <th><i class="fas fa-tags"></i> Kategorie</th>
                 </tr>
             </thead>
             <tbody>
                 {% for game in games %}
-                <tr>
-                    <td>{{ game.name }}</td>
+                <tr data-name="{{ game.name | lower }}" data-category="{{ game.category }}">
+                    <td class="text-start">{{ game.name }}</td>
                     <td>{{ game.category }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <p id="games-no-results" class="games-no-results d-none">Keine Spiele gefunden.</p>
     </div>
 </section>
+
+<script>
+    (function () {
+        const searchInput = document.getElementById("game-search");
+        const allCheckbox = document.getElementById("category-filter-all");
+        const categoryCheckboxes = Array.from(document.querySelectorAll(".category-filter-option"));
+        const rows = Array.from(document.querySelectorAll("#games-table tbody tr"));
+        const noResults = document.getElementById("games-no-results");
+
+        function applyFilters() {
+            const query = searchInput.value.trim().toLowerCase();
+            const selectedCategories = categoryCheckboxes
+                .filter((checkbox) => checkbox.checked)
+                .map((checkbox) => checkbox.value);
+            let visibleCount = 0;
+
+            rows.forEach(function (row) {
+                const matchesName = row.dataset.name.includes(query);
+                const matchesCategory = selectedCategories.length === 0
+                    || selectedCategories.includes(row.dataset.category);
+                const visible = matchesName && matchesCategory;
+                row.classList.toggle("d-none", !visible);
+                if (visible) {
+                    visibleCount += 1;
+                }
+            });
+
+            noResults.classList.toggle("d-none", visibleCount > 0);
+        }
+
+        searchInput.addEventListener("input", applyFilters);
+
+        allCheckbox.addEventListener("change", function () {
+            if (allCheckbox.checked) {
+                categoryCheckboxes.forEach((checkbox) => { checkbox.checked = false; });
+            }
+            applyFilters();
+        });
+
+        categoryCheckboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                if (checkbox.checked) {
+                    allCheckbox.checked = false;
+                } else if (categoryCheckboxes.every((cb) => !cb.checked)) {
+                    allCheckbox.checked = true;
+                }
+                applyFilters();
+            });
+        });
+    })();
+</script>
 {% endblock %}

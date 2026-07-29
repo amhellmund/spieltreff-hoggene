@@ -51,6 +51,16 @@ events:
     time_start: "16:00"
     time_end: "23:00"
     type: spieltreff
+  - date: 2026-10-10
+    date_end: 2026-10-11
+    days:
+      - date: 2026-10-10
+        time_start: "10:00"
+        time_end: "24:00"
+      - date: 2026-10-11
+        time_start: "10:00"
+        time_end: "18:00"
+    type: brett-vorm-kopf
   - date: 2026-11-06
     time_start: "16:00"
     time_end: "23:00"
