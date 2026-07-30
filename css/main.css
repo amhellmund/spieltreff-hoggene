@@ -324,12 +324,24 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.event-type-logo {
-    height: 70px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+.event-type-logo-wrap {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 24px auto 0;
+}
+
+.event-type-logo {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.event-type-logo--compact {
+    max-height: 76px;
 }
 
 .event-type-card .card-title {
