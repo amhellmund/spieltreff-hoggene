@@ -56,9 +56,9 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(100deg,
-            rgba(13, 39, 68, 0.80) 0%,
-            rgba(13, 39, 68, 0.62) 30%,
-            rgba(13, 39, 68, 0.20) 58%,
+            rgba(13, 39, 68, 0.55) 0%,
+            rgba(13, 39, 68, 0.42) 30%,
+            rgba(13, 39, 68, 0.12) 58%,
             rgba(13, 39, 68, 0.02) 92%);
 }
 
@@ -295,6 +295,20 @@ body {
     font-size: 1.15rem;
 }
 
+.construction-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.construction-notice i {
+    font-size: 2.5rem;
+}
+
 /* Regeln cards */
 .rules-grid {
     max-width: 1000px;
@@ -304,6 +318,48 @@ body {
     font-size: 2.2rem;
     color: #0d2744;
     margin-bottom: 12px;
+}
+
+.meal-time {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #555;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.meal-divider {
+    width: 75%;
+    margin: 0 auto 10px;
+    border: none;
+    border-top: 1px solid #888;
+}
+
+.meal-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .meal-option {
+        white-space: normal;
+    }
+}
+
+.meal-option i {
+    color: #0d2744;
+    font-size: 0.9rem;
+    width: 1.1em;
+    margin-bottom: 0;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 /* Event-type cards (entry page) */
@@ -357,6 +413,16 @@ body {
 
 .event-type-card .card-text {
     flex-grow: 1;
+}
+
+.event-type-btn {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    background-color: #0d2744;
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 24px;
+    font-weight: 600;
 }
 
 /* Search + category filter controls above the games table */
@@ -440,18 +506,29 @@ body {
 }
 
 /* Termine table row status */
+/* Bootstrap sets `color` directly on each td, so the row class alone can't
+   override it via inheritance — target the td explicitly. */
 .event-next {
     font-weight: bold;
+}
+
+.event-next>td {
     color: #000;
 }
 
 .event-past {
     font-weight: normal;
-    color: #666;
+}
+
+.event-past>td {
+    color: #bbb;
 }
 
 .event-future {
     font-weight: normal;
+}
+
+.event-future>td {
     color: #000;
 }
 
@@ -472,6 +549,34 @@ body {
     text-align: center;
     color: #333;
     font-size: 1.15rem;
+}
+
+.qr-code-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0;
+}
+
+.flyer-thumbnail {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.flyer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 
 .page-logo-container {

@@ -27,7 +27,10 @@ def copy_static_assets():
         src = ROOT_DIR / name
         dst = OUTPUT_DIR / name
         if src.is_dir():
-            shutil.copytree(src, dst, dirs_exist_ok=True)
+            shutil.copytree(
+                src, dst, dirs_exist_ok=True,
+                ignore=shutil.ignore_patterns("raw"),
+            )
         else:
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst)
@@ -67,7 +70,7 @@ def main():
                 page_title="Brett vorm Kopf", title="Brett vorm Kopf",
                 next_event=brett_vorm_kopf_next_event)
 
-    render_page("stub.html", "events/brett-am-ring.html", site, nav, footer,
+    render_page("brett-am-ring.html", "events/brett-am-ring.html", site, nav, footer,
                 page_title="Brett-am-Ring", title="Brett-am-Ring")
 
     render_page("games.html", "games.html", site, nav, footer,

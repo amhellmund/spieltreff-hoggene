@@ -5,11 +5,10 @@
 
 {% block content %}
 <section class="content-section">
-    <div class="page-logo-container">
-        <img src="{{ asset_prefix }}images/logo_brett-vorm-kopf.png" alt="Brett-vorm-Kopf Logo" class="page-logo">
-    </div>
-    <div class="info-text-without-section-header">
-        <p>Inhalte folgen in Kürze.</p>
+    <div class="flyer-container">
+        <a href="{{ asset_prefix }}images/flyer_brett-am-ring.png" target="_blank" rel="noopener">
+            <img src="{{ asset_prefix }}images/flyer_brett-am-ring.png" alt="Flyer Brett-vorm-Kopf" class="flyer-thumbnail">
+        </a>
     </div>
 </section>
 
@@ -23,6 +22,144 @@
         <p>Damit wir Personenanzahl und Zeiten planen können, meldet euch bitte vorab über unser
             <a href="https://forms.gle/NhNw8K6kUY34svK49" target="_blank" rel="noopener">Anmeldeformular</a> an.</p>
     </div>
+    <div class="qr-code-container">
+        <a href="https://forms.gle/NhNw8K6kUY34svK49" target="_blank" rel="noopener">
+            <img src="{{ asset_prefix }}images/qr_code_brett-am-ring.png" alt="QR-Code zum Anmeldeformular" class="qr-code-image">
+        </a>
+    </div>
+</section>
+
+<section id="spiele" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-dice"></i> <strong>Spiele</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text-without-section-header">
+        <p>Wir bringen eine große Auswahl an Kinder-, Familien-, Kenner- und Expertenspielen mit. Die Liste
+            mit den Spielen wird im September veröffentlicht.</p>
+    </div>
+</section>
+
+<section id="verpflegung" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-utensils"></i> <strong>Verpflegung</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="info-text-without-section-header">
+        <p>Wir bieten während der Veranstaltung neben <strong>belegten Brötchen</strong> und <strong>Snacks</strong>
+            folgende Mahlzeiten zum Selbstkostenpreis an:</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-3 rules-grid mx-auto">
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="card-title">Samstag Abend<span class="meal-time">18 Uhr</span></h3>
+                    <hr class="meal-divider">
+                    <p class="meal-option"><i class="fas fa-drumstick-bite"></i> <span>Kartoffelsalat + Fleischkäse</span></p>
+                    <p class="meal-option"><i class="fas fa-leaf"></i> <span>Kartoffelsalat + vegetarische Wiener</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="card-title">Sonntag Morgen<span class="meal-time">10 Uhr</span></h3>
+                    <hr class="meal-divider">
+                    <p class="meal-option"><i class="fas fa-drumstick-bite"></i> <span>Weißwurstfrühstück</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="card-title">Sonntag Mittag<span class="meal-time">13 Uhr</span></h3>
+                    <hr class="meal-divider">
+                    <p class="meal-option"><i class="fas fa-drumstick-bite"></i> <span>Kartoffelsalat + Grillsteaks</span></p>
+                    <p class="meal-option"><i class="fas fa-leaf"></i> <span>Kartoffelsalat + vegetarischer Grillkäse</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="rules" class="content-section">
+    <div class="section-header">
+        <div class="line"></div>
+        <h2><i class="fas fa-book"></i> <strong>Regeln</strong></h2>
+        <div class="line"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-3 rules-grid mx-auto">
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-chess-board"></i>
+                    <p class="card-text">Wir haben viele Spiele im Angebot, natürlich dürft ihr eure eigenen Spiele
+                        mitbringen. Wir übernehmen aber <strong>keine Haftung</strong> für verlorenes oder zerstörtes
+                        Spielematerial.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-friends"></i>
+                    <p class="card-text">Alle dürfen beim Spieltreff mitspielen egal welchen Alters. <strong>Kinder
+                            unter 12</strong> dürfen allerdings
+                        nur in <strong>Begleitung eines Erwachsenen</strong> teilnehmen. Jugendliche im Alter von
+                        <strong>12 bis 16 Jahren</strong> müssen <strong>ab 20 Uhr</strong> von einer erwachsenen
+                        Person begleitet werden.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils"></i>
+                    <p class="card-text"><strong>Wasser</strong> steht kostenlos vor Ort zur Verfügung. Weitere
+                        Getränke und Snacks bieten wir zu einem <strong>geringen Unkostenbeitrag</strong> an. Eigene
+                        Speisen und Getränke dürfen mitgebracht werden.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-wine-bottle"></i>
+                    <p class="card-text">Alle <strong>legalen und illegalen Drogen</strong> sind nicht willkommen.
+                        Bitte lasst Bier, Wein und Cannabis zu Hause und raucht nur außerhalb der
+                        Veranstaltungsräume.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-broom"></i>
+                    <p class="card-text">Die Räumlichkeiten des Hoggema Treffs werden kostenlos von der Stadt
+                        Hockenheim zur Verfügung gestellt. Deshalb sollten die Räume <strong>sauber und
+                            aufgeräumt</strong> verlassen werden.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rule-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-hammer"></i>
+                    <p class="card-text">Die Räumlichkeiten werden von vielfältigen Veranstaltungen in Hockenheim
+                        genutzt.
+                        <strong>Mutwillig und vorsätzlich</strong> zerstörte Einrichtungsgegenstände müssen ersetzt
+                        werden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="location" class="content-section">
@@ -31,6 +168,10 @@
         <h2><i class="fas fa-map-marker-alt"></i> <strong>Location</strong></h2>
         <div class="line"></div>
     </div>
+    <p class="location-text">
+        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4797b9006fd85fcb:0x340994ba67ba2329?sa=X&ved=1t:8290&ictx=111"
+            target="_blank" rel="noopener">Hoggema Treff, Ottostraße 2, Hockenheim</a>
+    </p>
     <div class="map-container">
         <img src="{{ asset_prefix }}images/location.png" alt="Karte zum Spieltreff" class="location-map">
     </div>
