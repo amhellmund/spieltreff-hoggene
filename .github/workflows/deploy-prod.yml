@@ -2,9 +2,8 @@ name: Deploy to Production
 
 on:
   push:
-    # This repository's main branch is "develop".
     branches:
-      - develop
+      - main
 
 permissions:
   contents: read
