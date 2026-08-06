@@ -1,0 +1,48 @@
+name: Deploy to QA
+
+on:
+  workflow_dispatch:
+    # Manual trigger, runnable from any branch chosen in the Actions UI.
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-qa
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: qa
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Build site
+        run: uv run build-page
+
+      - name: Trust remote host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H "${{ vars.HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy
+        env:
+          DEPLOY_PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          uv run deploy-page \
+            --host "${{ vars.HOST }}" \
+            --username "${{ secrets.USERNAME }}" \
+            --deploy-dir "${{ vars.DEPLOY_DIR }}"
