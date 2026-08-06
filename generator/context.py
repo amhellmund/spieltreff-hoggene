@@ -12,8 +12,8 @@ KNOWN_CATEGORIES = {"Familie", "Kenner", "Party", "Kinder", "Experte"}
 
 EVENT_TYPE_INFO = {
     "spieltreff": {"label": "Spieltreff", "page": "events/spieltreff.html"},
-    "brett-vorm-kopf": {"label": "Brett-vorm-Kopf", "page": "events/brett-vorm-kopf.html"},
-    "brett-am-ring": {"label": "Brett-am-Ring", "page": "events/brett-am-ring.html"},
+    "brett-vorm-kopf": {"label": "Brett vorm Kopf", "page": "events/brett-vorm-kopf.html"},
+    "brett-am-ring": {"label": "Brett am Ring", "page": "events/brett-am-ring.html"},
 }
 
 KNOWN_EVENT_TYPES = set(EVENT_TYPE_INFO)
