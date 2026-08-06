@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: deploy-prod
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
