@@ -187,7 +187,8 @@ body {
     }
 
     .banner {
-        height: 184px;
+        height: auto;
+        min-height: 184px;
         margin-top: 56px;
     }
 
@@ -201,9 +202,11 @@ body {
     }
 
     .banner-content {
-        left: 5%;
+        position: static;
+        margin-left: 5%;
         max-width: 80%;
         gap: 8px;
+        padding: 16px 0;
     }
 
     .banner-logo {
@@ -228,7 +231,8 @@ body {
 /* Additional breakpoint for very small screens */
 @media (max-width: 480px) {
     .banner {
-        height: 168px;
+        height: auto;
+        min-height: 168px;
         margin-top: 56px;
     }
 
@@ -406,6 +410,7 @@ body {
     max-width: 100%;
     width: auto;
     height: auto;
+    min-width: 0;
     object-fit: contain;
 }
 
@@ -549,6 +554,7 @@ body {
     max-width: 800px;
     width: 100%;
     height: auto;
+    min-width: 0;
 }
 
 .map-container {
@@ -568,6 +574,7 @@ body {
     max-width: 200px;
     width: 100%;
     height: auto;
+    min-width: 0;
     cursor: pointer;
 }
 
@@ -582,6 +589,7 @@ body {
     max-width: 400px;
     width: 100%;
     height: auto;
+    min-width: 0;
     cursor: pointer;
 }
 
