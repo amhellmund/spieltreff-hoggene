@@ -11,9 +11,9 @@ nav:
     dropdown:
       - label: Spieltreff
         page: events/spieltreff.html
-      - label: Brett-vorm-Kopf
+      - label: Brett vorm Kopf
         page: events/brett-vorm-kopf.html
-      - label: Brett-am-Ring
+      - label: Brett am Ring
         page: events/brett-am-ring.html
   - label: Spiele
     page: games.html

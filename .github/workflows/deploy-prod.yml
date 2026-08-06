@@ -21,6 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify environment configuration
+        run: |
+          missing=()
+          [ -z "${{ vars.HOST }}" ] && missing+=("vars.HOST")
+          [ -z "${{ vars.DEPLOY_DIR }}" ] && missing+=("vars.DEPLOY_DIR")
+          [ -z "${{ secrets.USERNAME }}" ] && missing+=("secrets.USERNAME")
+          [ -z "${{ secrets.PASSWORD }}" ] && missing+=("secrets.PASSWORD")
+          if [ ${#missing[@]} -ne 0 ]; then
+            echo "::error::Missing required config for the 'prod' environment: ${missing[*]}. Set these under Settings > Environments > prod."
+            exit 1
+          fi
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:

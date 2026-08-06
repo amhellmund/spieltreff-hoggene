@@ -73,6 +73,9 @@ def main():
     parser.add_argument("--deploy-dir", required=True, help="Remote deployment directory")
     parser.add_argument("--port", type=int, default=22, help="SSH port (default: 22)")
     args = parser.parse_args()
+    args.host = args.host.strip()
+    args.username = args.username.strip()
+    args.deploy_dir = args.deploy_dir.strip()
 
     if not BUILD_DIR.is_dir():
         sys.exit(f"Build directory not found: {BUILD_DIR}. Run 'uv run build-page' first.")
