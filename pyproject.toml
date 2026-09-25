@@ -9,11 +9,13 @@ dependencies = [
     "paramiko>=3.5.0",
     "scp>=0.15.0",
     "tqdm>=4.67.0",
+    "reportlab>=4.2.0",
 ]
 
 [project.scripts]
 build-page = "build:main"
 deploy-page = "deploy:main"
+build-club = "club.build:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -24,4 +26,5 @@ include = [
     "build.py",
     "deploy.py",
     "generator/**",
+    "club/**",
 ]
